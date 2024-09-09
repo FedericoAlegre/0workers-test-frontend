@@ -1,0 +1,70 @@
+.roulette-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 5px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .roulette-wheel {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    height: 45%;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+  }
+  
+  .number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #fff;
+  }
+  
+  .roulette-wheel {
+    transform-origin: 50% 50%;
+    transition: transform 4s ease-out; 
+  }
+  
+  .spinning {
+    transition: transform 4s ease-out;
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(3600deg); 
+    }
+  }
+  
+  .highlight {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .marker {
+    z-index: 10;
+    position: absolute; /* Se mantiene fija en la pantalla */
+    top: 69px; /* Ajusta según sea necesario */
+    left: 21.5%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid red;
+    transform: translate(-50%, 0) rotate(180deg);
+  }
